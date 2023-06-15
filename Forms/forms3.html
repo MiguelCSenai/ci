@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Atividade Forms</title>
+<link rel="stylesheet" type="text/css" href="../menuH_estilo.css"/>
+<meta charset="UTF-8">
+
+</head>
+
+<style>
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-bottom: -12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.label-float input{
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -webkit-appearance:none;
+  border-radius: 0;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid #3951b2;
+}
+
+.label-float input::placeholder{
+  color:transparent;
+}
+
+.label-float label{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}
+
+.label-float input:required:invalid + label{
+  color: red;
+}
+.label-float input:focus:required:invalid{
+  border-bottom: 2px solid red;
+}
+.label-float input:required:invalid + label:before{
+  content: '*';
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #3951b2;
+}
+
+
+#sec1 {
+
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid black;
+    height: 380px;
+
+    }
+
+.lefts {
+
+    width: 39%;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 2ch;
+
+}
+
+.rights {
+
+    width: 8%;
+    display: inline-block;
+    padding-left: 30px;
+
+}
+
+.pessoa {
+
+    width: 250px;
+    padding-left: 30px;
+
+}
+
+#titulos {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.user {
+
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 0px;
+
+}
+
+.email {
+
+    width: 330px;
+    margin-left: -11px;
+    margin-top: -30px;
+
+}
+
+.contato {
+
+    margin-left: 92px;
+
+}
+
+.pin {
+
+    width: 180px;
+    margin-left: 65px;
+
+}
+
+.local {
+
+    margin-left: 79px;
+    padding-bottom: 40px;
+
+}
+
+.inboxs {
+
+margin-left: -152px;
+margin-top: 88px;
+
+}
+
+.slc {
+
+  display: inline-block;
+  margin-top: -10px;
+  
+}
+
+.slct {
+
+  margin-left: 15px;
+  margin-right: 25px;
+
+}
+
+.inboxs2 {
+
+    margin-left: -152px;
+    margin-top: 98px;
+
+}
+
+.d3 {
+
+    display: inline-block;
+
+}
+
+.inboxs3 {
+
+margin-left: -152px;
+margin-top: 48px;
+
+}
+
+.inboxs3 div {
+
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+.s1 {
+
+    margin-left: 10px;
+
+}
+
+</style>
+
+<body>
+
+  <br><br><br><br>
+
+  <div>
+    <div>
+      <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Hardware/hardware.html">Hardware</a></li>
+        <li><a href="">Software Microsoft</a>
+            <ul>
+                <li><a href="../Microsoft/Project/project.html">Project</a></li>
+                <li><a href="../Microsoft/Visio/visio.html">Visio</a></li>
+                <li><a href="../Microsoft/Windows 11/win11.html">Windowns 11</a></li>
+            </ul>
+        </li>
+        <li> <a href="">Software Adobe</a>
+           <ul>
+            <li><a href="../Adobe/Acrobat Reader/acrobatreader.html">Acrobat Reader</a></li>
+            <li><a href="../Adobe/Lightroom/lightroom.html">Lightroom</a></li>
+            <li><a href="../Adobe/Photoshop/photoshop.html">Photoshop</a></li>
+        </ul>
+    </li>
+      <li><a href="../Sobre/sobre.html">Sobre</a></li>
+    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+    <li><a href="../Portfolio/portfolio.html">Portfólio</a></li>
+    <li><a href="../Forms/forms3.html">Forms</a></li>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+    <div id="sec1" class="csec">
+        <div class="lefts">
+            <h1 id="titulos" class="user">Dados Pessoais</h1>      
+             <img src="pessoa.png" class="pessoa">
+        </div> 
+        <div class="inboxs">
+
+          <p> 
+            <div class="label-float">
+              <input type="text" placeholder=" "/>
+              <label>Nome</label>
+            </div>
+          </p>
+          
+          <p> 
+            <div class="label-float">
+              <input type="text" placeholder=" "/>
+              <label>Nascimento</label>
+            </div>
+          </p>
+
+          <p> 
+            <div class="label-float">
+              <input type="text" placeholder=" "/>
+              <label>Sexo</label>
+            </div>
+          </p>
+          <br>
+          <div class="slc">
+            Formação
+            <SELECT name="formação" class="slct">
+              <OPTION selected label="Selecione" value="Selecione">Selecione</OPTION>
+              <OPTION label="Analfabeto" value="Analfabeto">Analfabeto</OPTION>
+              <OPTION label="Ensino Fundamental Incompl." value="Ensino Fundamental Incompl.">Ensino Fundamental Incompl.</OPTION>
+              <OPTION label="Ensino Fundamental Compl."value="Ensino Fundamental Compl.">Ensino Fundamental Compl.</OPTION>
+              <OPTION label="Cursando Ensino Fundamental"value="Cursando Ensino Fundamental">Cursando Ensino Fundamental</OPTION>
+              <OPTION label="Ensino Médio Incompl." value="Ensino Médio Incompl.">Ensino Médio Incompl.</OPTION>
+              <OPTION label="Ensino Médio Compl." value="Ensino Médio Compl.">Ensino Médio Compl.</OPTION>
+              <OPTION label="Cursando Ensino Médio"value="Cursando Ensino Médio">Cursando Ensino Médio</OPTION>
+              <OPTION label="Ensino Técnico" value="Ensino Técnico">Ensino Técnico</OPTION>
+              <OPTION label="Cursando Ensino Técnico"value="Cursando Ensino Técnico">Cursando Ensino Técnico</OPTION>
+              <OPTION label="Ensino Superior" value="Ensino Superior">Ensino Superior</OPTION>
+              <OPTION label="Cursando Ensino Superior"value="Cursando Ensino Superior">Cursando Ensino Superior</OPTION>
+          </SELECT>
+
+          Profissão
+
+          <SELECT name="profissão" class="slct">
+            <OPTION selected label="Nenhum" value="Nenhum">Nenhum</OPTION>
+            <OPTION label="Administrador de ambulatório" value="Administrador de ambulatório">Administrador de ambulatório</OPTION>
+            <OPTION label="Eco Sport 2.0" value="Eco Sport 2.0">Eco Sport 2.0 </OPTION>
+            <OPTION label="Ford KA"       value="Ford KA ">     Ford KA       </OPTION>
+            <OPTION label="Idea ELX 1.4" value="Idea ELX 1.4">Idea ELX 1.4</OPTION>
+            <OPTION label="Idea ELX 1.8" value="Idea ELX 1.8">Idea ELX 1.8</OPTION>
+            <OPTION label="Idea ELX 2.0" value="Idea ELX 2.0">Idea ELX 2.0</OPTION>
+            <OPTION label="Celta 1.0" value="Celta 1.0"> Celta 1.0</OPTION>
+            <OPTION label="Corsa 1.0" value="Corsa 1.0"> Corsa 1.0</OPTION>
+            <OPTION label="Corsa 1.4" value="Corsa 1.4"> Corsa 1.4</OPTION>
+            <OPTION label="Corsa 1.8" value="Corsa 1.8"> Corsa 1.8</OPTION>
+        </SELECT>
+  
+          </div>
+
+          <p> 
+            <div class="label-float">
+              <input type="text" placeholder=" "/>
+              <label>CPF</label>
+            </div>
+          </p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+    <div id="sec1" class="csec">
+        <div class="lefts">
+            <h1 id="titulos" class="contato">Contato</h1>      
+             <img src="email.png" class="email">
+        </div>
+
+        <div class="inboxs2">
+        
+        <p> 
+          <div class="label-float">
+            <input type="text" placeholder=" "/>
+            <label>Email</label>
+          </div>
+        </p>
+
+        <p> 
+          <div class="label-float">
+            <input type="text" placeholder=" "/>
+            <label>Telefone</label>
+          </div>
+        </p>
+
+        <p> 
+          <div class="label-float">
+            <input type="text" placeholder=" "/>
+            <label>Celular</label>
+          </div>
+        </p>
+
+        <p> 
+          <div class="label-float">
+            <input type="text" placeholder=" "/>
+            <label>Skype</label>
+          </div>
+        </p>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+<div id="sec1" class="csec">
+    <div class="lefts">
+        <h1 id="titulos" class="local">Endereço</h1>      
+         <img src="pin.png" class="pin">
+    </div>
+
+    <div class="inboxs3">
+        
+        <div class="label-float">
+          <input type="text" placeholder=" "/>
+          <label>Logradouro</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" placeholder=" "/>
+          <label>nº</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" placeholder=" "/>
+          <label>CEP</label>
+        </div>
+
+
+          <div class="label-float">
+          <input type="text" placeholder=" "/>
+          <label>Bairro</label>
+          </div>
+        
+                Estado <SELECT name="formação" class="s1">
+                  <OPTION placeholder="UF" selected label="UF" value="UF">UF</OPTION>
+                  <OPTION label="AC"value="AC">AC</OPTION>
+                  <OPTION label="AL"value="AL">AL</OPTION>
+                  <OPTION label="AP"value="AP">AP</OPTION>
+                  <OPTION label="AM"value="AM">AM</OPTION>
+                  <OPTION label="BA"value="BA">BA</OPTION>
+                  <OPTION label="CE"value="CE">CE</OPTION>
+                  <OPTION label="DF"value="DF">DF</OPTION>
+                  <OPTION label="ES"value="ES">ES</OPTION>
+                  <OPTION label="GO"value="GO">GO</OPTION>
+                  <OPTION label="MA"value="MA">MA</OPTION>
+                  <OPTION label="MT"value="MT">MT</OPTION>
+                  <OPTION label="MS"value="MS">MS</OPTION>
+                  <OPTION label="MG"value="MG">MG</OPTION>
+                  <OPTION label="PA"value="PA">PA</OPTION>
+                  <OPTION label="PB"value="PB">PB</OPTION>
+                  <OPTION label="PR"value="PR">PR</OPTION>
+                  <OPTION label="PE"value="PE">PE</OPTION>
+                  <OPTION label="PI"value="PI">PI</OPTION>
+                  <OPTION label="RJ"value="RJ">RJ</OPTION>
+                  <OPTION label="RN"value="RN">RN</OPTION>
+                  <OPTION label="RS"value="RS">RS</OPTION>
+                  <OPTION label="RO"value="RO">RO</OPTION>
+                  <OPTION label="RR"value="RR">RR</OPTION>
+                  <OPTION label="SC"value="SC">SC</OPTION>
+                  <OPTION label="SP"value="SP">SP</OPTION>
+                  <OPTION label="SE"value="SE">SE</OPTION>
+                  <OPTION label="TO"value="TO">TO</OPTION>
+              </SELECT>
+              
+              <div class="label-float">
+                <input type="text" placeholder=" "/>
+                <label>Complemento</label>
+                </div>
+
+            </div>
+      </div>
+
+        
+
+      </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
